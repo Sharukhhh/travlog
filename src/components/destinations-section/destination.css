@@ -1,0 +1,51 @@
+/* destinations.css */
+
+.destinations-section {
+    @apply py-8 px-4;
+}
+
+.section-title {
+    @apply flex flex-col lg:flex-row justify-between items-center mb-8;
+}
+
+.text-content {
+    @apply text-center lg:text-left mb-4 lg:mb-0;
+}
+
+
+
+.arrows {
+    @apply flex justify-center lg:justify-end space-x-12;
+}
+
+.arrow-icon {
+    @apply text-2xl cursor-pointer border rounded-full;
+}
+
+.cards-section {
+    @apply grid gap-8 md:grid-cols-3 max-w-6xl mx-auto;
+}
+
+.card {
+    @apply flex flex-col shadow-lg rounded-xl bg-neutral-50 p-2;
+}
+
+.card-image {
+    @apply object-cover h-80 w-full mb-4;
+}
+
+.card-content {
+    @apply flex flex-col ;
+}
+
+.card-title {
+    @apply text-xl font-bold mb-2;
+}
+
+.card-subtitle {
+    @apply text-gray-500 mb-4;
+}
+
+.card-number {
+    @apply text-2xl font-semibold;
+}

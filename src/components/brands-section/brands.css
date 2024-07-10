@@ -1,0 +1,13 @@
+
+
+.brands-section {
+    @apply py-8 px-4 my-5;
+}
+
+.brands-grid {
+    @apply grid gap-8 grid-cols-2 lg:grid-cols-4 items-center;
+}
+
+.brand-item {
+    @apply flex justify-center;
+}
