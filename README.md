@@ -6,6 +6,6 @@ Developed and styled a responsive landing page using **ReactJS** and **Tailwind 
 ---
 
 
-### Click here for demo: [Travlog Live](https://travlog-rust.vercel.app/)
+### Click here to view: [Travlog Live](https://travlog-rust.vercel.app/)
 
 <!-- ### UI Captures -->
