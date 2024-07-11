@@ -1,11 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './footer.css';
+import { IoIosArrowDropdown } from "react-icons/io";
 
 const FooterList = ({footerTitle , isMain, item1, item2, item3, item4}) => {
+
+    const [accordionOpen, setAccordionOpen] = useState(false);
     return (
         <>
         <div className='list lg:w-1/4 mb-6 lg:mb-0'>
-            <h3 className='footer-list-heading'>{footerTitle}</h3>
+            {isMain ? (
+                <>
+                    <h3 className='footer-list-heading'>{footerTitle}</h3>
+                </>
+            ) : (
+                <>
+                <div className='flex justify-between'>
+                    <h3 className='footer-list-heading'>{footerTitle}</h3>
+                    <span className='rounded-full md:hidden'onClick={() => setAccordionOpen(!accordionOpen)} >
+                        <IoIosArrowDropdown size={22} />
+                    </span>
+                </div>
+                {!accordionOpen && (
+                    <hr className=' my-2 md:hidden'/>
+                )}
+                </>
+            )}
             {isMain ? (
                 <>
                     <ul className=''>
@@ -19,12 +38,17 @@ const FooterList = ({footerTitle , isMain, item1, item2, item3, item4}) => {
                 </>
             ) : (
                 <>
-                    <ul className='text-gray-500 flex flex-col space-y-6'>
-                        <li className='ml-3'>{item1}</li>
-                        <li>{item2}</li>
-                        <li>{item3}</li>
-                        {item4 && <li>{item4}</li>}
-                    </ul>
+                {accordionOpen && (
+                    <>
+                        <ul className='text-gray-500 flex flex-col space-y-6'>
+                            <li className='ml-3'>{item1}</li>
+                            <li>{item2}</li>
+                            <li>{item3}</li>
+                            {item4 && <li>{item4}</li>}
+                        </ul>
+                        <hr className=' my-2 md:hidden'/>
+                    </>
+                )}
                 </>
             )}
         </div>

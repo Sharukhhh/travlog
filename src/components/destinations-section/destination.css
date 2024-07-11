@@ -27,7 +27,7 @@
 }
 
 .card {
-    @apply flex flex-col shadow-lg rounded-xl bg-neutral-50 p-1 hover:scale-90;
+    @apply flex flex-col shadow-lg rounded-xl bg-neutral-50 p-2 hover:scale-90;
 }
 
 .card-image {
@@ -42,10 +42,5 @@
     @apply text-xl font-bold mb-2;
 }
 
-.card-subtitle {
-    @apply text-gray-500 mb-4;
-}
 
-.card-number {
-    @apply text-2xl font-semibold;
-}
+

@@ -11,8 +11,8 @@ const Card = ({image, cardTitle, location, price}) => {
                         <h2 className='card-title'>{cardTitle}</h2>
                         <span className='text-pink-500 font-bold text-xl'>{price}</span>
                     </div>
-                    <p className='card-subtitle'>{location}</p>
-                    <span className='card-number text-orange-500'>4.5</span>
+                    <p className='text-gray-500 mb-4'>{location}</p>
+                    <span className='font-bold text-xl text-orange-500'>4.5</span>
                 </div>
             </div>
         </>

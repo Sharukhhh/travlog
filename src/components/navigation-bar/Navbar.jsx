@@ -24,13 +24,13 @@ const Navbar = () => {
                     </div>
 
                     <div className='hidden sm:flex space-x-3'>
-                        <button className='btn-login'>login</button>
-                        <button className='btn-signup'>signup</button>
+                        <button className='btn-login'>LOGIN</button>
+                        <button className='btn-signup'>SIGNUP</button>
                     </div>
                 </div>
 
                 {isMenuOpen && (
-                    <div className='flex flex-col space-y-3 mb-2 md:hidden'>
+                    <div className='flex flex-col space-y-6 mb-2 md:hidden'>
                         <a href="/" className="navlink">Home</a>
                         <a href="/" className="navlink">Discover</a>
                         <a href="/" className="navlink">Special Deals</a>
