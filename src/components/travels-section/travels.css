@@ -1,0 +1,26 @@
+/* travels.css */
+
+.travel-first-half {
+    @apply w-full mx-auto lg:w-1/2;
+}
+
+.travel-image {
+    @apply w-full h-full object-cover;
+}
+
+.travel-second-half {
+    @apply w-full lg:w-1/2 p-6 flex flex-col justify-center;
+}
+
+
+.description {
+    @apply text-gray-700 my-6;
+}
+
+.mini-cards-container {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-4;
+}
+
+.mini-card {
+    @apply bg-transparent p-3 rounded-xl border border-gray-200 ;
+}
