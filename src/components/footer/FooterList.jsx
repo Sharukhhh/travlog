@@ -20,9 +20,7 @@ const FooterList = ({footerTitle , isMain, item1, item2, item3, item4}) => {
                         <IoIosArrowDropdown size={22} />
                     </span>
                 </div>
-                {!accordionOpen && (
-                    <hr className=' my-2 md:hidden'/>
-                )}
+                <hr className=' my-2 md:hidden'/>
                 </>
             )}
             {isMain ? (
@@ -39,15 +37,20 @@ const FooterList = ({footerTitle , isMain, item1, item2, item3, item4}) => {
             ) : (
                 <>
                 {accordionOpen && (
-                    <>
-                        <ul className='text-gray-500 flex flex-col space-y-6'>
-                            <li className='ml-3'>{item1}</li>
-                            <li>{item2}</li>
-                            <li>{item3}</li>
-                            {item4 && <li>{item4}</li>}
-                        </ul>
-                        <hr className=' my-2 md:hidden'/>
-                    </>
+                    <ul className='text-gray-500 flex flex-col space-y-6'>
+                        <li className='ml-3'>{item1}</li>
+                        <li>{item2}</li>
+                        <li>{item3}</li>
+                        {item4 && <li>{item4}</li>}
+                    </ul>
+                )}
+                {!accordionOpen && (
+                    <ul className='text-gray-500 flex-col space-y-6 hidden md:block'>
+                        <li className='ml-3'>{item1}</li>
+                        <li>{item2}</li>
+                        <li>{item3}</li>
+                        {item4 && <li>{item4}</li>}
+                    </ul>
                 )}
                 </>
             )}
